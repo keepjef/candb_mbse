@@ -46,7 +46,29 @@
             id="a4f9cbf5-1d62-4b0e-8093-04c3701559b6" name="Root Operational Activity"/>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
-          id="f462a438-2a3a-4b69-b9eb-86bee44e5d75" name="Operational Capabilities"/>
+          id="f462a438-2a3a-4b69-b9eb-86bee44e5d75" name="Operational Capabilities">
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="18b4f54a-9f6d-42bb-ba58-3ee5bfd1ce0f" name="Разработка коммуникационной матрицы">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="243711ea-1f59-457a-a514-86ac0107e5d2" involved="#ee7406de-1206-4ada-8b67-3f5dc9a2178a"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="d7fa2758-e028-4a0b-b6e0-04c6a2e51f71" involved="#4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="83cec86f-8ec9-450a-8646-6061b28e10d3" name="Контроль версий матриц">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="9f420831-4d9d-4ec8-8d8f-5e17dfd963f6" involved="#ee7406de-1206-4ada-8b67-3f5dc9a2178a"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="9b15ee4d-d2d9-41b4-8112-037637b3b0cd" involved="#4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="28b11107-2dc1-491f-88f4-1652f5a66640" name="Верификация">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="fc15b5e5-e5f0-49e3-8061-18d9b95ce747" involved="#ee7406de-1206-4ada-8b67-3f5dc9a2178a"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="c8d2e2b2-33ea-47ec-ae85-68b24c1d17f4" involved="#4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"/>
+        </ownedOperationalCapabilities>
+      </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="312c14e2-ab6d-4292-b0db-3a9780200560" name="Interfaces"/>
       <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
@@ -54,7 +76,16 @@
       <ownedRolePkg xsi:type="org.polarsys.capella.core.data.oa:RolePkg" id="60794d5a-46aa-43e1-a030-13b4153dda25"
           name="Roles"/>
       <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="802a2830-c9de-429b-b030-002811fd5aa9"
-          name="Operational Entities"/>
+          name="Operational Entities">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="cf007735-c75b-41cb-add4-039e772497ea"
+            name="Архитектор EE" abstractType="#4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="3cebe0ae-c42d-4754-bf15-8d4149f36082"
+            name="CAN Matrix" abstractType="#ee7406de-1206-4ada-8b67-3f5dc9a2178a"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"
+            name="Архитектор EE" actor="true" human="true"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="ee7406de-1206-4ada-8b67-3f5dc9a2178a"
+            name="CAN Matrix"/>
+      </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
         id="d3dd6cfa-8709-4ee9-9cc6-fad2ed19d3b0" name="System Analysis">
