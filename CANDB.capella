@@ -45,25 +45,31 @@
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
             id="a4f9cbf5-1d62-4b0e-8093-04c3701559b6" name="Root Operational Activity">
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="4e966026-dc43-4c93-b3f7-cb85585f815e" name="Проектирование сети"/>
+              id="4e966026-dc43-4c93-b3f7-cb85585f815e" name="Разработка/проектирование сети"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="5255807a-22a4-4a17-a404-b41e70b68b35" name="Анализ спецификаций"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="31594b1f-8aac-4d07-b56a-389a3ef29c27" name="Формирование CAN матрицы"/>
+              id="31594b1f-8aac-4d07-b56a-389a3ef29c27" name="Формирование матрицы сигналов"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="8ac234ab-cad3-4a41-8115-06de06e02cad" name="Предоставление спецификаций"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="45421ff5-0d9b-4dd8-841d-173751f6792f" name="Хранение данных топологии"/>
+              id="45421ff5-0d9b-4dd8-841d-173751f6792f" name="Управление данными топологии"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="1264d2ea-f379-4f2c-863f-99d8c5481760" name="Хранение данных матрицы"/>
+              id="1264d2ea-f379-4f2c-863f-99d8c5481760" name="Управление данными матрицы"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="d19ae945-a64e-4889-be2c-797e974d4e39" name="Верификация"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77" name="Создание релиза"/>
+              id="8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77" name="Создание релиза сетей"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="1f248c6f-27df-49b1-b601-1844d1286f56" name="Получение данных матрицы"/>
+              id="1f248c6f-27df-49b1-b601-1844d1286f56" name="Получение конфигурации сети"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="97bb26c1-a8c1-42d4-b58a-5983dc5d04e3" name="Получение данных матрицы"/>
+              id="97bb26c1-a8c1-42d4-b58a-5983dc5d04e3" name="Получение конфигурации сети"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="a2b82f06-9bdc-48db-a7e6-a1db8eba856f" name="Формирование отчета реализации"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="cf35c695-843a-4834-afd5-f0185819c2c1" name="Формирование отчёта тестирования"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="2b3d2c3d-5086-44e6-91ab-06d5c16e1383" name="Анализ отчёта"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="832ec39e-7b03-45a1-8c6b-a87641f6be32" name="Спецификация" target="#5255807a-22a4-4a17-a404-b41e70b68b35"
               source="#8ac234ab-cad3-4a41-8115-06de06e02cad"/>
@@ -83,20 +89,44 @@
               id="4a0fc56f-37fa-4f5e-b679-4fc278341506" name="Данные матрицы" target="#d19ae945-a64e-4889-be2c-797e974d4e39"
               source="#1264d2ea-f379-4f2c-863f-99d8c5481760"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="60b1c452-277b-443e-ac5d-e84c35cf5a13" name="Проверенная матрица"
-              target="#8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77" source="#d19ae945-a64e-4889-be2c-797e974d4e39"/>
+              id="c1ef6276-7a51-4a2a-83f4-7c7de131184e" name="Данные конфигурации сети"
+              target="#1f248c6f-27df-49b1-b601-1844d1286f56" source="#8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="c1ef6276-7a51-4a2a-83f4-7c7de131184e" name=".dbc файл" target="#1f248c6f-27df-49b1-b601-1844d1286f56"
-              source="#8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="47d4d6ce-0f75-4257-9511-42ffec564233" name=".dbc файл" target="#97bb26c1-a8c1-42d4-b58a-5983dc5d04e3"
-              source="#d19ae945-a64e-4889-be2c-797e974d4e39"/>
+              id="47d4d6ce-0f75-4257-9511-42ffec564233" name="Данные конфигурации сети"
+              target="#97bb26c1-a8c1-42d4-b58a-5983dc5d04e3" source="#8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="e911e667-98ae-452d-9e02-92989cdb8ce2" name="Данные о топологии"
               target="#4e966026-dc43-4c93-b3f7-cb85585f815e" source="#45421ff5-0d9b-4dd8-841d-173751f6792f"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="ed6fce5a-91d4-4cde-bb0c-ef3f6958a9b4" name="Данные матрицы" target="#31594b1f-8aac-4d07-b56a-389a3ef29c27"
               source="#1264d2ea-f379-4f2c-863f-99d8c5481760"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="024ec442-d4eb-47f8-801c-51128a2ccfb1" name="Отчёт о верификации"
+              target="#4e966026-dc43-4c93-b3f7-cb85585f815e" source="#d19ae945-a64e-4889-be2c-797e974d4e39"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="717f55a5-ab92-4fef-870e-ba8a1db33d90" name="Данные конфигурации сети"
+              target="#a2b82f06-9bdc-48db-a7e6-a1db8eba856f" source="#1f248c6f-27df-49b1-b601-1844d1286f56"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="709e760c-6821-45ea-98ca-f895771f6e32" name="Данные конфигурации сети"
+              target="#cf35c695-843a-4834-afd5-f0185819c2c1" source="#97bb26c1-a8c1-42d4-b58a-5983dc5d04e3"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="810c1730-074f-4d36-8a77-455af42a70a9" name="Отчёт о реализации"
+              target="#2b3d2c3d-5086-44e6-91ab-06d5c16e1383" source="#cf35c695-843a-4834-afd5-f0185819c2c1"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="72bd3a8f-177e-403c-a823-f7f8f415d79d" name="Отчёт тестирования"
+              target="#2b3d2c3d-5086-44e6-91ab-06d5c16e1383" source="#a2b82f06-9bdc-48db-a7e6-a1db8eba856f"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="2761bcca-31b6-4fb6-b47b-11f1ede73c6d" name="Требования к сигналам"
+              target="#4e966026-dc43-4c93-b3f7-cb85585f815e" source="#2b3d2c3d-5086-44e6-91ab-06d5c16e1383"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="faf503f1-b941-4b0a-98e3-dc60d1cb7036" name="Данные матрицы" target="#8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77"
+              source="#1264d2ea-f379-4f2c-863f-99d8c5481760"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="99885da6-71b1-4603-a17d-ceaff71a5f45" name="Отчёт о верификации"
+              target="#8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77" source="#d19ae945-a64e-4889-be2c-797e974d4e39"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="c7c2390b-1199-4fa6-994d-111de97975e7" name="Данные топологии" target="#8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77"
+              source="#45421ff5-0d9b-4dd8-841d-173751f6792f"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -109,7 +139,7 @@
               id="d7fa2758-e028-4a0b-b6e0-04c6a2e51f71" involved="#4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"/>
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="83cec86f-8ec9-450a-8646-6061b28e10d3" name="Контроль версий матриц">
+            id="83cec86f-8ec9-450a-8646-6061b28e10d3" name="Управление конфигурацией">
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
               id="9f420831-4d9d-4ec8-8d8f-5e17dfd963f6" involved="#ee7406de-1206-4ada-8b67-3f5dc9a2178a"/>
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
@@ -135,12 +165,12 @@
             name="Архитектор EE" abstractType="#4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="3cebe0ae-c42d-4754-bf15-8d4149f36082"
             name="Топология сетей" abstractType="#ee7406de-1206-4ada-8b67-3f5dc9a2178a"/>
-        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="f8470d21-3dde-485e-b858-66ddf5fd9edd"
-            name="Системный архитектор" abstractType="#a201d641-a689-411e-b758-3f202f02addb"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="1a8b446f-b639-48ef-a72c-107239d837fe"
             name="Разработчик ЭБУ" abstractType="#c6393801-eb85-4981-9cc6-15c1d4c71e88"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="0dda316c-5060-4126-9aca-6eff0e510559"
             name="Инженер по качеству" abstractType="#9721e92b-181d-4ab4-8737-3985a40bbb54"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="6155fe4a-72e8-4f04-818d-9c32b679efaf"
+            name="Системный архитектор" abstractType="#2af1a704-365b-4f5e-96ce-1f473e233e5a"/>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"
             name="Архитектор EE" actor="true" human="true">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
@@ -158,6 +188,9 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="dcf386ef-bfbb-42e1-bbbd-8cde91bd2cfc" targetElement="#8bbbc8a5-7963-4a1d-b5fe-e69bd8c07a77"
               sourceElement="#4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="3f72719a-7867-4fb3-80b0-8e325b47380b" targetElement="#2b3d2c3d-5086-44e6-91ab-06d5c16e1383"
+              sourceElement="#4a321f7c-26b1-40d7-9c7f-ecd4eaa65956"/>
         </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="ee7406de-1206-4ada-8b67-3f5dc9a2178a"
             name="Топология сетей">
@@ -173,21 +206,13 @@
                 sourceElement="#32d4b2f1-4bcf-46e8-a01b-44e11f4f29c0"/>
           </ownedEntities>
         </ownedEntities>
-        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="a201d641-a689-411e-b758-3f202f02addb"
-            name="Системный архитектор">
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="c8596eee-cfcc-4dc6-aee3-ef19f279286b"
-              name="Спецификация" abstractType="#0af4bc56-473a-43f6-bdba-f3a2e07f95cd"/>
-          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="0af4bc56-473a-43f6-bdba-f3a2e07f95cd"
-              name="Спецификация">
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="2091f8e2-214e-405f-8414-0f9af4332bbe" targetElement="#8ac234ab-cad3-4a41-8115-06de06e02cad"
-                sourceElement="#0af4bc56-473a-43f6-bdba-f3a2e07f95cd"/>
-          </ownedEntities>
-        </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="c6393801-eb85-4981-9cc6-15c1d4c71e88"
             name="Разработчик ЭБУ" actor="true" human="true">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="5be31e40-9156-482f-9b03-37f0c2fdd392" targetElement="#1f248c6f-27df-49b1-b601-1844d1286f56"
+              sourceElement="#c6393801-eb85-4981-9cc6-15c1d4c71e88"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="6f88b2c1-e7b1-479c-a002-7d7656fe754e" targetElement="#a2b82f06-9bdc-48db-a7e6-a1db8eba856f"
               sourceElement="#c6393801-eb85-4981-9cc6-15c1d4c71e88"/>
         </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="9721e92b-181d-4ab4-8737-3985a40bbb54"
@@ -195,6 +220,15 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="4014a01e-120a-454d-9853-08338f66494f" targetElement="#97bb26c1-a8c1-42d4-b58a-5983dc5d04e3"
               sourceElement="#9721e92b-181d-4ab4-8737-3985a40bbb54"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="d1d758ec-5b42-44b4-9582-1d57fb26cdb3" targetElement="#cf35c695-843a-4834-afd5-f0185819c2c1"
+              sourceElement="#9721e92b-181d-4ab4-8737-3985a40bbb54"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="2af1a704-365b-4f5e-96ce-1f473e233e5a"
+            name="Системный архитектор" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="2091f8e2-214e-405f-8414-0f9af4332bbe" targetElement="#8ac234ab-cad3-4a41-8115-06de06e02cad"
+              sourceElement="#2af1a704-365b-4f5e-96ce-1f473e233e5a"/>
         </ownedEntities>
       </ownedEntityPkg>
     </ownedArchitectures>
